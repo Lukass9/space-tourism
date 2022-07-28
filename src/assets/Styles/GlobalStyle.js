@@ -13,6 +13,7 @@ html {
 }
   
 body {
+    background-color: black;
     font-family: ${({theme}) => theme.fontFamily.barlow};
     margin: 0;
     padding: 0;

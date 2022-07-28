@@ -12,7 +12,6 @@ const Wrapp = styled.div`
   width: 100vw;
   height: 100vh;
   background-image: url(${backgroud});
-  background-size: cover;
 `;
 
 const App = () => {

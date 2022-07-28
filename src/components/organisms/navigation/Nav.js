@@ -1,20 +1,22 @@
 import React from "react";
 import styled from "styled-components";
+import logo from "../../../assets/shared/logo.svg"
 
 const Wrapp = styled.div `
     display: flex;
-    flex-direction: column;
-    align-items:flex-end ;
+    flex-direction: row;
+    align-items:flex-start;
+    justify-content: space-between;
     width: 100%;
 `
 const Navi = styled.ol`
     display: flex;
     flex-direction: row;
-    padding: 45px 20px;
-    margin: 60px 0;
+    padding: 2.5vw 2vw;
+    margin: 2.85vw 0;
     background-color: rgba(255, 255, 255, 0.04);
     color: ${({theme})=> theme.colors.white};
-    font-size: ${({theme})=> theme.fontSize.navText};
+    font-size: 1vw;
     font-family: ${({theme})=> theme.fontFamily.barlowCondensed};
     letter-spacing: ${({theme})=> theme.letterSpacing.navText};
     list-style-type: none;
@@ -25,8 +27,8 @@ const Navi = styled.ol`
     &::before{
         content:' ';
         position: absolute;
-        transform: translateX(-95%) translateY(10px);
-        width: 50%;
+        transform: translateX(-98%) translateY(0.6vw);
+        width: 57%;
         height: 1px;
         background-color: ${({theme})=> theme.colors.white};
         opacity: 0.25;
@@ -39,18 +41,22 @@ const Navi = styled.ol`
             counter-increment: navCounter;  
             content: "0"counter(navCounter) " ";
             font-weight: bold;
+            margin-right: 0.2vw;
         }
         &:first-child{
-            margin-left: 16%;
+            margin-left: 8vw;
             counter-set: navCounter -1;
         }
-
     }
 `
-
+const Logo = styled.img`   
+    margin: 4.5vw;
+    width: 3vw;
+`
 const Nav = () =>{
     return(
         <Wrapp>
+            <Logo src={logo}/>
             <Navi>
                 <li>HOME</li>
                 <li>DESTINATION</li>
