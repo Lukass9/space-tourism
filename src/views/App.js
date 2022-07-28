@@ -11,17 +11,10 @@ const Wrapp = styled.div`
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  /* background-image: url(${backgroud}); */
-  background-position: center;
+  background-image: url(${backgroud});
   background-size: cover;
-  background-repeat: no-repeat;
 `;
 
-const Img = styled.img ` 
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-`
 const App = () => {
   return (
     <>
@@ -29,7 +22,6 @@ const App = () => {
       <GlobalStyle/>
         <Wrapp>
           <Nav/>
-          <Img src={backgroud}/>
         </Wrapp>
       </ThemeProvider>
     </>
