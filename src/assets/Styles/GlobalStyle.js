@@ -15,8 +15,9 @@ html {
 body {
     background-color: black;
     font-family: ${({theme}) => theme.fontFamily.barlow};
+    font-weight: 400;
     margin: 0;
     padding: 0;
-    overflow-y: hidden;
+    overflow: hidden;
   }
 `;
