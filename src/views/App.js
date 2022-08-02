@@ -1,30 +1,26 @@
 import { GlobalStyle } from 'assets/Styles/GlobalStyle';
 import React from 'react';
-import styled, { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import {theme} from '../assets/Styles/theme'
-import backgroud from '../assets/home/background-home-desktop.jpg'
-import Nav from 'components/organisms/navigation/Nav';
+import MainTemplate from 'components/tempates/MainTemplate/MainTemplate';
+import Home from './Home';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Destination from './Destination';
 
-const Wrapp = styled.div`
-  display: flex;
-  /* align-items: center; */
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  background-image: url(${backgroud});
-  background-size: cover;
-`;
 
 const App = () => {
   return (
-    <>
+    <BrowserRouter>
       <ThemeProvider theme={theme}>
       <GlobalStyle/>
-        <Wrapp>
-          <Nav/>
-        </Wrapp>
+        <MainTemplate>
+          <Routes>
+            <Route path={"/destination"} element={<Destination/>}/>
+            <Route path={"/"} element={<Home/>}/>
+          </Routes>
+        </MainTemplate>
       </ThemeProvider>
-    </>
+    </BrowserRouter>
   );
 }
 
