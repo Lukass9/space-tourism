@@ -34,7 +34,6 @@ const Navi = styled.ol`
 
     li{
         margin-left: 9%;
-
         &::before{
             counter-increment: navCounter;  
             content: "0"counter(navCounter) " ";
