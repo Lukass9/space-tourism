@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import HomeBg from 'assets/home/background-home-desktop.jpg'
 
 const Wrapp = styled.div `
     display: flex;
@@ -61,7 +62,10 @@ const P = styled.p `
     font-weight: 400;
     text-align: justify;
 `
-const Home = () =>{
+const Home = ({handleSetBackground}) =>{
+    useEffect(()=>{
+        handleSetBackground(HomeBg)
+    },[])
     return(
         <Wrapp>
             <WrappArticle>
