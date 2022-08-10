@@ -6,6 +6,7 @@ import MainTemplate from 'components/tempates/MainTemplate/MainTemplate';
 import Home from './Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Destination from './Destination';
+import data from 'assets/data'
 
 
 const App = () => {
@@ -20,7 +21,7 @@ const App = () => {
       <GlobalStyle/>
         <MainTemplate background={background}>
           <Routes>
-            <Route path={"/destination"} element={<Destination handleSetBackground={handleSetBackground}/>}/>
+            <Route path={"/destination"} element={<Destination data={data.destinations} handleSetBackground={handleSetBackground}/>}/>
             <Route path={"/"} element={<Home handleSetBackground={handleSetBackground}/>}/>
           </Routes>
         </MainTemplate>
