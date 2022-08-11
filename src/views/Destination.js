@@ -17,7 +17,7 @@ const TitleBig = styled.h1 `
     font-family: 'Bellefair';
     font-size: 100px;
     font-weight: 400;
-    margin-top: 37px;
+    margin: 37px 0;
 `
 
 const H1grey = styled(H1)` 
@@ -74,11 +74,22 @@ const StyledLinkSub = styled(StyledLink)`
             }
         }
 `
+const Description = styled.p`  
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: #D0D6F9;
+    width: 444px;
+`
 
 const Destination = ({handleSetBackground, data}) =>{
     useEffect(()=>{
         handleSetBackground(DestinationBg)
     },[])
+
+    console.log(data[0])
     return(
         <>
             <Wrapp>
@@ -94,7 +105,8 @@ const Destination = ({handleSetBackground, data}) =>{
                         <StyledLinkSub to="/destination/europa">EUROPA</StyledLinkSub>
                         <StyledLinkSub to="/destination/titan">TITAN</StyledLinkSub>
                     </NaviSub>
-                    <TitleBig>MOON</TitleBig>
+                    <TitleBig>{data[0].name.toUpperCase()}</TitleBig>
+                    <Description>{data[0].description}</Description>
                 </WrappText>
             </WrappContent>
         </>
