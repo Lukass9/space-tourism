@@ -84,6 +84,39 @@ const Description = styled.p`
     width: 444px;
 `
 
+const WrappDetails = styled.div ` 
+    border-top: 1px solid  #383B4B;
+    margin-top: 12%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+`
+const WrappDetailsInfo = styled.div` 
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+`
+
+const Title = styled.p `
+    font-family: 'Barlow Condensed';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 2.3625px;
+    color: #D0D6F9;
+    margin: 30px 0 10px 0;
+`
+const Information = styled.p `
+    font-family: 'Bellefair';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0;
+`
 const Destination = ({handleSetBackground, data}) =>{
     useEffect(()=>{
         handleSetBackground(DestinationBg)
@@ -107,6 +140,16 @@ const Destination = ({handleSetBackground, data}) =>{
                     </NaviSub>
                     <TitleBig>{data[0].name.toUpperCase()}</TitleBig>
                     <Description>{data[0].description}</Description>
+                    <WrappDetails>
+                        <WrappDetailsInfo>
+                            <Title>AVG. DISTANCE</Title>
+                            <Information>{data[0].distance}</Information>
+                        </WrappDetailsInfo>
+                        <WrappDetailsInfo>
+                            <Title>EST. TRAVEL TIME</Title>
+                            <Information>{data[0].travel}</Information>
+                        </WrappDetailsInfo>
+                    </WrappDetails>
                 </WrappText>
             </WrappContent>
         </>

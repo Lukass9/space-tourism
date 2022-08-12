@@ -14,7 +14,7 @@ export const Navi = styled.ol`
     display: flex;
     flex-direction: row;
     padding: 36px 30px;
-    background-color: rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.04);
     color: ${({theme})=> theme.colors.white};
     font-size:  ${({theme})=> theme.fontSize.navText};
     font-weight: 400;
@@ -23,7 +23,7 @@ export const Navi = styled.ol`
     list-style-type: none;
     counter-reset: navCounter;
     width: 58%;
-    backdrop-filter: blur(41px);
+    backdrop-filter: blur(25px);
 
     &::before{
         content:' ';
