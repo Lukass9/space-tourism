@@ -1,8 +1,8 @@
 import React, {useEffect} from "react";
 import styled from "styled-components";
 import DestinationBg from 'assets/destination/background-destination-desktop.jpg'
-import Moon from 'assets/destination/image-moon.png'
 import { Navi, StyledLink } from "components/organisms/navigation/Nav.style";
+import { Outlet } from "react-router-dom";
 
 const H1 = styled.h1`
     color: white;
@@ -32,7 +32,7 @@ const Wrapp = styled.div `
 
 const Img = styled.img `
     margin-top: 5%;
-    width: 47%;
+    /* width: 47%; */
 `
 const WrappContent = styled.div ` 
     display: flex;
@@ -46,13 +46,15 @@ const WrappNav = styled.div `
     margin: 0;
 `
 const NaviSub = styled(Navi)`
-    padding: 0;
+    margin-left: 12vw;
     backdrop-filter: blur(0);
     background-color: transparent;
     color: ${({theme})=> theme.colors.lightBlue};
     &::before{
         content: none;
     }
+    padding: 0px 0px 0px 0px;
+    transform: translateY(4vh);
 `
 const activeClassName = 'active';
 const StyledLinkSub = styled(StyledLink)`
@@ -117,41 +119,38 @@ const Information = styled.p `
     color: #FFFFFF;
     margin: 0;
 `
-const Destination = ({handleSetBackground, data}) =>{
+
+const Section1 = styled.section ` 
+    display: flex; 
+    width: 47vw;
+`
+
+const Section2 = styled.section `
+    display: flex;
+    align-items: flex-end;
+    width: 53vw;
+`
+const Destination = ({handleSetBackground}) =>{
     useEffect(()=>{
         handleSetBackground(DestinationBg)
     },[])
-
-    console.log(data[0])
     return(
         <>
             <Wrapp>
-                <H1grey>01</H1grey>
-                <H1>PICK YOUR DESTINATION</H1>
-            </Wrapp>
-            <WrappContent>
-                <Img src={Moon}/>
-                <WrappText>
+                <Section1>
+                    <H1grey>01</H1grey>
+                    <H1>PICK YOUR DESTINATION</H1>
+                </Section1>
+                <Section2>
                     <NaviSub>
-                        <StyledLinkSub to="/destination/moon">MOON</StyledLinkSub>
-                        <StyledLinkSub to="/destination/mars">MARS</StyledLinkSub>
-                        <StyledLinkSub to="/destination/europa">EUROPA</StyledLinkSub>
-                        <StyledLinkSub to="/destination/titan">TITAN</StyledLinkSub>
+                            <StyledLinkSub to="/destination/moon">MOON</StyledLinkSub>
+                            <StyledLinkSub to="/destination/mars">MARS</StyledLinkSub>
+                            <StyledLinkSub to="/destination/europa">EUROPA</StyledLinkSub>
+                            <StyledLinkSub to="/destination/titan">TITAN</StyledLinkSub>
                     </NaviSub>
-                    <TitleBig>{data[0].name.toUpperCase()}</TitleBig>
-                    <Description>{data[0].description}</Description>
-                    <WrappDetails>
-                        <WrappDetailsInfo>
-                            <Title>AVG. DISTANCE</Title>
-                            <Information>{data[0].distance}</Information>
-                        </WrappDetailsInfo>
-                        <WrappDetailsInfo>
-                            <Title>EST. TRAVEL TIME</Title>
-                            <Information>{data[0].travel}</Information>
-                        </WrappDetailsInfo>
-                    </WrappDetails>
-                </WrappText>
-            </WrappContent>
+                </Section2>
+            </Wrapp>
+            <Outlet/>
         </>
     )
 }
