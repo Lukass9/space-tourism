@@ -5,15 +5,16 @@ import {theme} from '../assets/Styles/theme'
 import MainTemplate from 'components/tempates/MainTemplate/MainTemplate';
 import Home from './Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Destination from './Destination';
+import Destination from './Destination/Destination';
 import data from 'assets/data'
-import { Moon } from './Moon';
-import { Mars } from './Mars';
-import { Europa } from './Europa';
-import { Titan } from './Titan';
-
+import MoonPic from 'assets/destination/image-moon.png'
+import MarsPic from 'assets/destination/image-mars.png'
+import EuropaPic from 'assets/destination/image-europa.png'
+import TitanPic from 'assets/destination/image-titan.png'
+import { Planets } from './Destination/Planets';
 
 const App = () => {
+  const planets = [MoonPic,MarsPic,EuropaPic,TitanPic]
   const [background, setBackground] = useState('')
   const handleSetBackground = (bck) =>{
       setBackground(bck)
@@ -27,10 +28,9 @@ const App = () => {
           <Routes>
             <Route exact path={"/"}  element={<Home handleSetBackground={handleSetBackground}/>}/>
             <Route path={"/destination"} element={<Destination handleSetBackground={handleSetBackground}/>}>
-              <Route path={"moon"} element={<Moon data={data.destinations} />} />
-              <Route path={"mars"} element={<Mars data={data.destinations} />} />
-              <Route path={"europa"} element={<Europa data={data.destinations} />} />
-              <Route path={"titan"} element={<Titan data={data.destinations} />} />
+              {data.destinations.map((destination, i) => (
+                <Route key={destination.name} path={destination.name.toLowerCase()} element={<Planets planet={planets[i]} data={destination}/>} />
+              ))}
             </Route>
           </Routes>
         </MainTemplate>
