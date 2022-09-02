@@ -14,6 +14,7 @@ import TitanPic from 'assets/destination/image-titan.png'
 import { Planets } from './Destination/Planets';
 import Crew from './Crew/Crew';
 import { Persons } from './Crew/Persons';
+import DouglasPic from 'assets/crew/image-douglas-hurley.png'
 
 const App = () => {
   const planets = [MoonPic,MarsPic,EuropaPic,TitanPic]
@@ -35,7 +36,7 @@ const App = () => {
               ))}
             </Route>
             <Route path={"/crew"} element={<Crew handleSetBackground={handleSetBackground} data={data.crew}/>}>
-              <Route path={encodeURIComponent(data.crew[0].name)} element={<Persons person={planets[0]} data={data.crew[0]}/>} />
+              <Route path={encodeURIComponent(data.crew[0].name)} element={<Persons person={DouglasPic  } data={data.crew[0]}/>} />
             </Route>
           </Routes>
         </MainTemplate>
