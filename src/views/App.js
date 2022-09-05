@@ -15,9 +15,13 @@ import { Planets } from './Destination/Planets';
 import Crew from './Crew/Crew';
 import { Persons } from './Crew/Persons';
 import DouglasPic from 'assets/crew/image-douglas-hurley.png'
+import MarkPic from 'assets/crew/image-mark-shuttleworth.png'
+import VictorPic from 'assets/crew/image-victor-glover.png'
+import AnoushehPic from 'assets/crew/image-anousheh-ansari.png'
 
 const App = () => {
   const planets = [MoonPic,MarsPic,EuropaPic,TitanPic]
+  const persons = [DouglasPic, MarkPic, VictorPic, AnoushehPic]
   const [background, setBackground] = useState('')
   const handleSetBackground = (bck) =>{
       setBackground(bck)
@@ -36,7 +40,9 @@ const App = () => {
               ))}
             </Route>
             <Route path={"/crew"} element={<Crew handleSetBackground={handleSetBackground} data={data.crew}/>}>
-              <Route path={encodeURIComponent(data.crew[0].name)} element={<Persons person={DouglasPic  } data={data.crew[0]}/>} />
+              {data.crew.map((crew, i) => (
+                <Route key={crew.name} path={encodeURIComponent(crew.name)} element={<Persons person={persons[i]} data={crew}/>} />
+              ))}
             </Route>
           </Routes>
         </MainTemplate>
