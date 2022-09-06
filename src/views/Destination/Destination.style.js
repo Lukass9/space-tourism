@@ -18,47 +18,60 @@ export const Wrapp = styled.div `
     margin: 50px 170px 0 170px;
 `
 export const NaviSub = styled(Navi)`
-    margin-left: 12vw;
+    margin: 0;
+    padding: 0;
+    width: 40%;
     backdrop-filter: blur(0);
     background-color: transparent;
     color: ${({theme})=> theme.colors.lightBlue};
     &::before{
         content: none;
     }
-    padding: 0px 0px 0px 0px;
-    transform: translateY(4vh);
 `
 export const activeClassName = 'active';
 export const StyledLinkSub = styled(StyledLink)`
+    margin: 0;
+    padding:0;
     margin-left: 35px;
     &:first-child{
             margin-left: 0;
-        }
+    }
     &::before{
         content: none;
     }
     &:hover{
-            &::after{
-                bottom: -12px;
-            }
+        &::after{
+            bottom: -12px;
         }
-        &.${activeClassName} {
-            &::after {
-                bottom: -12px;
-            }
+    }
+    &.${activeClassName} {
+        &::after {
+            bottom: -12px;
         }
+    }
 `
 export const Section1 = styled.section ` 
-    display: flex; 
+    display: flex;
+    justify-content: flex-end;
     width: 47vw;
 `
-
+export const PageTitle = styled.section ` 
+    display: flex; 
+    width: 100vw;
+    margin: 2% 0 0 0;
+    padding-left: 11.5%;
+`
 export const Section2 = styled.section `
     display: flex;
     align-items: flex-end;
     width: 53vw;
 `
-
+export const NaviWrapp = styled.section `
+    display: flex;
+    justify-content: flex-end;
+    width: 100vw;
+    /* padding-right: 22%; */
+`
 export const TitleBig = styled.h1 ` 
     color: white;
     font-family: 'Bellefair';
@@ -74,7 +87,7 @@ export const Img = styled.img `
 export const WrappContent = styled.div ` 
     display: flex;
     flex-direction: row ;
-    padding: 2% 17%;
+    /* padding: 2% 17%; */
 `
 export const WrappText = styled.div ` 
     margin-left: 12vw;
