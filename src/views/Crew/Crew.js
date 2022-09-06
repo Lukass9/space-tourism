@@ -9,9 +9,11 @@ const Navi = styled(NaviSub)`
     margin: 0;
     transform:translateY(0);
 `
-const Wrapp1 = styled(Wrapp)` 
+const Wrapp1 = styled(Wrapp)`
+    display:flex;
+    justify-content: space-between;
     margin: 0px 170px 0px 170px;
-    width: 77%;``
+    width: 77%;
 `
 
 const activeClassName = 'active';

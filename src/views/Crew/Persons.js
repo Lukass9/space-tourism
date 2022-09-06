@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Img = styled.img`
     transform: translateY(17vmin);
 `
-const Section1 = styled.section `
+const Section1 = styled.section`
     position: relative;
     top: 15%;
     display: flex; 
@@ -21,6 +21,7 @@ const WrappContent = styled.div`
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    width: 100%;
     height:55vh;
 `
 const Role = styled.h1`
