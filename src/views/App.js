@@ -18,10 +18,16 @@ import DouglasPic from 'assets/crew/image-douglas-hurley.png'
 import MarkPic from 'assets/crew/image-mark-shuttleworth.png'
 import VictorPic from 'assets/crew/image-victor-glover.png'
 import AnoushehPic from 'assets/crew/image-anousheh-ansari.png'
+import Technology from './Technology/Technology';
+import LunchPic from "assets/technology/image-launch-vehicle-portrait.jpg"
+import SpaceRaportPic from "assets/technology/image-spaceport-portrait.jpg"
+import LandscapePic from "assets/technology/image-space-capsule-portrait.jpg"
+import { Vechicle } from './Technology/Vechicle';
 
 const App = () => {
   const planets = [MoonPic,MarsPic,EuropaPic,TitanPic]
   const persons = [DouglasPic, MarkPic, VictorPic, AnoushehPic]
+  const vechicle =[LunchPic, SpaceRaportPic, LandscapePic]
   const [background, setBackground] = useState('')
   const handleSetBackground = (bck) =>{
       setBackground(bck)
@@ -42,6 +48,11 @@ const App = () => {
             <Route path={"/crew"} element={<Crew handleSetBackground={handleSetBackground} data={data.crew}/>}>
               {data.crew.map((crew, i) => (
                 <Route key={crew.name} path={encodeURIComponent(crew.name)} element={<Persons person={persons[i]} data={crew}/>} />
+              ))}
+            </Route>
+            <Route path={"/technology"} element={<Technology handleSetBackground={handleSetBackground} data={data.technology}/>}>
+              {data.technology.map((technology, i) => (
+                <Route key={technology.name} path={encodeURIComponent(technology.name)} element={<Vechicle vechicle={vechicle[i]} data={technology}/>} />
               ))}
             </Route>
           </Routes>
