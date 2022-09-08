@@ -9,20 +9,17 @@ const Section1 = styled.section`
     top: 15%;
     display: flex; 
     flex-direction: column;
-    width: 40%;
+    /* width: 470px; */
 `
 
 const Section2 = styled.section `
-    display: flex;
-    align-items: flex-end;
-    /* width: 40%; */
+ 
 `
 const WrappContent = styled.div`
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: space-between ;
     flex-direction: row;
-    width: 100%;
-    height:55vh;
 `
 const Role = styled.h1`
     font-family: 'Barlow Condensed';
@@ -44,13 +41,14 @@ const Name = styled.h1`
     color: #FFFFFF;
 `
 const Description = styled.h1`
-    margin-top: 8%;
+    margin-top: 17px;
     font-family: 'Barlow';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 32px;
     color: #D0D6F9;
+    width: 70%;
 `
 
 export const Vechicle = ({data, vechicle}) =>{

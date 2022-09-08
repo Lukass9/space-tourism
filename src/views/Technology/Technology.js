@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import TechnologyBg from 'assets/technology/background-technology-desktop.jpg'
-import { Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { H1, H1grey, NaviSub, PageTitle, Section1, Section2, StyledLinkSub, Wrapp } from "views/Destination/Destination.style";
 import styled from "styled-components";
@@ -9,20 +9,31 @@ const NaviWrapp = styled(Section2)`
     align-items: center;
     width: auto;
 `
+const NaviWrapp_v2 = styled.section`
+    display: flex;
+    align-items: center;
+    padding-right: 3vw;
+`
+
+// OL
 const Navi = styled(NaviSub)`
-    flex-direction: column ;
+    flex-direction: column  ;
     align-items: center ;
     justify-content: center;
 `
+const Navi_v2 = styled.ol`
+    padding: 0;
+`
+
 const Wrapp1 = styled(Wrapp)`
     display:flex;
-    justify-content: space-between;
-    margin: 0px 170px 0px 170px;
-    width: 77%;
+    /* justify-content: space-between; */
+    margin: 0px 0px 0px 10vw;
+    /* width: 77%; */
 `
 
 const activeClassName = 'active';
-const StyledDotLink = styled(StyledLinkSub)`
+const StyledDotLink = styled(NavLink).attrs({ activeClassName })`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,8 +41,10 @@ const StyledDotLink = styled(StyledLinkSub)`
     height: 80px;
     background-color: transparent;
     border-radius: 50%;
-    border: 1px solid #FFFFFF;
+    border: 1px solid RGBA(255,255,255,0.25);
     margin: 12px;
+    color: #FFFFFF;
+    text-decoration: none ;
 
     font-family: 'Bellefair';
     font-style: normal;
@@ -45,17 +58,11 @@ const StyledDotLink = styled(StyledLinkSub)`
     &.${activeClassName} {
         background-color: #fff;
         color: #000;
-        &::after{
-            content: none;
-        }
     }
 
+
     &:hover{
-        opacity: 1;
-        
-        &::after{
-            content: none;
-        }
+        border: 1px solid RGBA(255,255,255,1);
     }
 
 `
@@ -65,7 +72,7 @@ const Technology = ({handleSetBackground, data}) =>{
 
     useEffect(()=>{
         handleSetBackground(TechnologyBg)
-        // navigate("/crew/douglas%20hurley", { replace: true })
+        navigate("/technology/launch%20vehicle", { replace: true })
     },[])
     return(
         <>
@@ -74,13 +81,13 @@ const Technology = ({handleSetBackground, data}) =>{
                     <H1>SPACE LAUNCH 101</H1>
             </PageTitle>
             <Wrapp1>
-                <NaviWrapp>
-                    <Navi>
+                <NaviWrapp_v2>
+                    <Navi_v2>
                         {data.map((person, i)=>(
                             <StyledDotLink key={person.name} to={`/technology/${encodeURIComponent(person.name.toLowerCase())}`} > {i+1} </StyledDotLink>
                         ))}
-                    </Navi>
-                </NaviWrapp>
+                    </Navi_v2>
+                </NaviWrapp_v2>
                 <Outlet/>
             </Wrapp1>
             
