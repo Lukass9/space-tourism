@@ -23,7 +23,7 @@ const StyledDotLink = styled(StyledLinkSub)`
     background-color: #FFF;
     border-radius: 50%;
     margin: 12px ;
-    opacity: 0.5;
+    opacity: 0.17;
 
     &.${activeClassName} {
         opacity: 1;
@@ -33,7 +33,7 @@ const StyledDotLink = styled(StyledLinkSub)`
     }
 
     &:hover{
-        opacity: 1;
+        opacity: 0.5;
         
         &::after{
             content: none;

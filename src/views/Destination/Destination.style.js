@@ -1,31 +1,57 @@
 import styled from "styled-components";
 import { Navi, StyledLink } from "components/organisms/navigation/Nav.style";
+import { device } from "assets/Styles/theme";
 
 export const H1 = styled.h1`
     color: white;
     font-family: 'Barlow Condensed';
-    font-size: 28px;
+    font-size: 16px;
     font-weight: 400;
-    letter-spacing: 4.725px;
+    letter-spacing: 2.7px;
+
+    @media ${device.desktop}{
+        font-size: 28px;
+        letter-spacing: 4.725px;
+    }
 `
 export const H1grey = styled(H1)` 
     opacity: 0.25;
     font-weight: 700;
     margin-right: 20px;
+    
 `
 export const Wrapp = styled.div ` 
     display: flex; 
     margin: 50px 170px 0 170px;
 `
+export const WrappForMobile = styled.div` 
+    display: flex;
+    flex-direction: column;
+
+    @media ${device.desktop}{
+        /* display: block; */
+    }
+
+`
 export const NaviSub = styled(Navi)`
+    position: static;
+    flex-direction: row;
     margin: 0;
     padding: 0;
-    width: 40%;
+    /* width: 40%; */
     backdrop-filter: blur(0);
     background-color: transparent;
     color: ${({theme})=> theme.colors.lightBlue};
+    transform: translateX(0px);
+    height: auto;
+    z-index: 4;
+    
     &::before{
         content: none;
+    }
+    
+    @media ${device.desktop}{
+        width: 40%;
     }
 `
 export const activeClassName = 'active';
@@ -58,8 +84,13 @@ export const Section1 = styled.section `
 export const PageTitle = styled.section ` 
     display: flex; 
     width: 100vw;
-    margin: 2% 0 0 0;
-    padding-left: 11.5%;
+    justify-content: center;
+
+    @media ${device.desktop}{
+        margin: 2% 0 0 0;
+        padding-left: 11.5%;
+        justify-content: flex-start;
+    }
 `
 export const Section2 = styled.section `
     display: flex;
@@ -68,9 +99,12 @@ export const Section2 = styled.section `
 `
 export const NaviWrapp = styled.section `
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     width: 100vw;
-    /* padding-right: 22%; */
+
+    @media ${device.desktop}{
+        justify-content: flex-end;
+    }
 `
 export const TitleBig = styled.h1 ` 
     color: white;

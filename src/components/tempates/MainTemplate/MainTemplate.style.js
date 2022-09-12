@@ -1,3 +1,4 @@
+import { device } from "assets/Styles/theme";
 import styled from "styled-components";
     
 export const Wrapp = styled.div`
@@ -9,4 +10,9 @@ export const Wrapp = styled.div`
   height: 100vh;
   background-image: url(${props => props.bck});
   background-size: cover;
+
+  @media ${device.desktop}{
+    height: 100vh;
+  }
+
 `;

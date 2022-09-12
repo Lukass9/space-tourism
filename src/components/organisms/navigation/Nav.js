@@ -1,12 +1,25 @@
-import React from "react";
+import Menu from "components/atoms/Menu";
+import React, {useState} from "react";
 import logo from "../../../assets/shared/logo.svg"
 import { Logo, Navi, Wrapp, StyledLink } from "./Nav.style";
 
+
+
 const Nav = () =>{
+    const [hamburger, setHamburger] = useState(false)
+
+    const handleActiveMenu = () =>{
+        setHamburger(!hamburger)
+    }
+
     return(
         <Wrapp>
+            {window.matchMedia('(max-width: 1439px)').matches ? 
+                <Menu hamburger={hamburger} handleActiveMenu={handleActiveMenu} /> : 
+                null}
             <Logo src={logo}/>
-            <Navi>
+            {/* <button onClick={()=> alert("o chuj chodzi?")}>Kurwa</button> */}
+            <Navi hamburger={hamburger}>
                 <StyledLink to="/">HOME</StyledLink>
                 <StyledLink to="/destination">DESTINATION</StyledLink>
                 <StyledLink to="/crew">CREW</StyledLink>

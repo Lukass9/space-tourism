@@ -23,5 +23,13 @@ export const theme = {
         heading5: '4.75px',
         subheading1: '2.35px',
         navText: '2.7px'
-    }
+    },
 }
+const size = {
+    tablet: '768px',
+    desktop: '1440px'
+  }
+export const device = {
+    tablet: `(min-width: ${size.tablet})`,
+    desktop: `(min-width: ${size.desktop})`
+  };

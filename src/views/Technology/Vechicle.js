@@ -13,7 +13,6 @@ const Section1 = styled.section`
 `
 
 const Section2 = styled.section `
- 
 `
 const WrappContent = styled.div`
     display: flex;
