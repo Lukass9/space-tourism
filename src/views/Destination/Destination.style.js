@@ -27,9 +27,10 @@ export const Wrapp = styled.div `
 export const WrappForMobile = styled.div` 
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
 
     @media ${device.desktop}{
-        /* display: block; */
+        overflow-y: hidden;
     }
 
 `
@@ -65,24 +66,48 @@ export const StyledLinkSub = styled(StyledLink)`
     &::before{
         content: none;
     }
+
     &:hover{
         &::after{
+            position: absolute;
             bottom: -12px;
+            content: "";
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: ${({theme})=> theme.colors.white};
+            opacity: 0.5;
         }
     }
-    &.${activeClassName} {
-        &::after {
-            bottom: -12px;
-        }
-    }
+            &.${activeClassName} {
+                &::after {
+                    position: absolute;
+                    top: auto;
+                    bottom: -12px;
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 3px;
+                    background-color: ${({theme})=> theme.colors.white};
+                    opacity: 1;
+                }
+            }
+
 `
-export const Section1 = styled.section ` 
+export const Section1 = styled.section `
     display: flex;
-    justify-content: flex-end;
-    width: 47vw;
+    justify-content: center;
+    order: -1;
+
+    @media ${device.desktop}{
+        display: flex;
+        justify-content: flex-end;
+        width: 47vw;
+        order: 0;
+    }
 `
 export const PageTitle = styled.section ` 
-    display: flex; 
+    display: flex;
     width: 100vw;
     justify-content: center;
 
@@ -95,7 +120,11 @@ export const PageTitle = styled.section `
 export const Section2 = styled.section `
     display: flex;
     align-items: flex-end;
-    width: 53vw;
+    /* width: 53vw; */
+    
+    @media ${device.desktop}{
+        width: 53vw;
+    }
 `
 export const NaviWrapp = styled.section `
     display: flex;
@@ -109,22 +138,43 @@ export const NaviWrapp = styled.section `
 export const TitleBig = styled.h1 ` 
     color: white;
     font-family: 'Bellefair';
-    font-size: 100px;
+    font-size: 58px;
     font-weight: 400;
     margin: 37px 0;
+    
+    @media ${device.desktop}{
+        font-size: 100px;
+    }
 `
 
 export const Img = styled.img `
-    margin-top: 5%;
+   width: 50%;
+    @media ${device.desktop}{
+        margin-top: 5%;
+        width: auto;
+    }
     /* width: 47%; */
 `
 export const WrappContent = styled.div ` 
     display: flex;
-    flex-direction: row ;
+    flex-direction: column;
+
+    @media ${device.desktop}{
+        flex-direction: row;
+    }
     /* padding: 2% 17%; */
 `
 export const WrappText = styled.div ` 
-    margin-left: 12vw;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    align-items: center;
+    width:100%;
+    @media ${device.desktop}{
+        align-items: flex-start;
+        margin-left: 12vw;
+        width: auto;
+    }
 `
 export const WrappNav = styled.div ` 
     margin: 0;
@@ -133,23 +183,42 @@ export const Description = styled.p`
     font-family: 'Barlow';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 32px;
+    font-size: 15px;
+    line-height: 25px;
     color: #D0D6F9;
-    width: 444px;
+    width: 327px;
+    text-align: center;
+
+    @media ${device.desktop}{
+        font-size: 18px;
+        width: 444px;
+        line-height: 32px;
+        text-align: left;
+    }
 `
 
 export const WrappDetails = styled.div ` 
     border-top: 1px solid  #383B4B;
     margin-top: 12%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
+    align-items: center;    
+
+    @media ${device.desktop}{
+        flex-direction: row;
+        align-items: flex-start;
+    }
 `
 export const WrappDetailsInfo = styled.div` 
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 50%;
+
+    @media ${device.desktop}{
+        align-items: flex-start;
+    }
 `
 
 export const Title = styled.p `

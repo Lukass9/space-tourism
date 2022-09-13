@@ -92,7 +92,6 @@ export const StyledLink = styled(NavLink).attrs({ activeClassName })`
         }
     }
 
-
     @media ${device.desktop}{
         line-height: 17px;
         position: relative;
