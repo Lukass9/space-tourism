@@ -27,7 +27,10 @@ export const Wrapp = styled.div `
 export const WrappForMobile = styled.div` 
     display: flex;
     flex-direction: column;
+    width: 100vw;
     overflow-y: scroll;
+    align-items: center;
+
 
     @media ${device.desktop}{
         overflow-y: hidden;
@@ -39,7 +42,7 @@ export const NaviSub = styled(Navi)`
     flex-direction: row;
     margin: 0;
     padding: 0;
-    /* width: 40%; */
+    width: auto;
     backdrop-filter: blur(0);
     background-color: transparent;
     color: ${({theme})=> theme.colors.lightBlue};
@@ -52,7 +55,8 @@ export const NaviSub = styled(Navi)`
     }
     
     @media ${device.desktop}{
-        width: 40%;
+        width: 41vw;
+        /* width: 40%; */
     }
 `
 export const activeClassName = 'active';
@@ -106,14 +110,13 @@ export const Section1 = styled.section `
         order: 0;
     }
 `
-export const PageTitle = styled.section ` 
+export const PageTitle = styled.section `
     display: flex;
-    width: 100vw;
+    width: 75vw;
+    margin: 2% 0;
     justify-content: center;
 
     @media ${device.desktop}{
-        margin: 2% 0 0 0;
-        padding-left: 11.5%;
         justify-content: flex-start;
     }
 `
@@ -140,10 +143,11 @@ export const TitleBig = styled.h1 `
     font-family: 'Bellefair';
     font-size: 58px;
     font-weight: 400;
-    margin: 37px 0;
+    margin: 37px 0 0 0;
     
     @media ${device.desktop}{
         font-size: 100px;
+        margin: 37px 0;
     }
 `
 
@@ -161,6 +165,7 @@ export const WrappContent = styled.div `
 
     @media ${device.desktop}{
         flex-direction: row;
+        flex-wrap: wrap;
     }
     /* padding: 2% 17%; */
 `

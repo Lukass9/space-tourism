@@ -21,14 +21,6 @@ const Destination = ({handleSetBackground}) =>{
                     <H1grey>01</H1grey>
                     <H1>PICK YOUR DESTINATION</H1>
             </PageTitle>
-            <NaviWrapp>
-                <NaviSub>
-                        <StyledLinkSub to="/destination/moon">MOON</StyledLinkSub>
-                        <StyledLinkSub to="/destination/mars">MARS</StyledLinkSub>
-                        <StyledLinkSub to="/destination/europa">EUROPA</StyledLinkSub>
-                        <StyledLinkSub to="/destination/titan">TITAN</StyledLinkSub>
-                </NaviSub>
-            </NaviWrapp>
             <Outlet/>
         </WrappForMobile>
     )
