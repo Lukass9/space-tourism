@@ -45,9 +45,9 @@ const App = () => {
                 <Route key={destination.name} path={destination.name.toLowerCase()} element={<Planets planet={planets[i]} data={destination}/>} />
               ))}
             </Route>
-            <Route path={"/crew"} element={<Crew handleSetBackground={handleSetBackground} data={data.crew}/>}>
+            <Route path={"/crew"} element={<Crew handleSetBackground={handleSetBackground} />}>
               {data.crew.map((crew, i) => (
-                <Route key={crew.name} path={encodeURIComponent(crew.name)} element={<Persons person={persons[i]} data={crew}/>} />
+                <Route key={crew.name} path={encodeURIComponent(crew.name)} element={<Persons person={persons[i]} data={crew} crewName={data.crew}/>} />
               ))}
             </Route>
             <Route path={"/technology"} element={<Technology handleSetBackground={handleSetBackground} data={data.technology}/>}>

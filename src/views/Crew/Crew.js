@@ -4,6 +4,7 @@ import { Outlet } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { H1, H1grey, NaviSub, PageTitle, Section1, Section2, StyledLinkSub, Wrapp } from "views/Destination/Destination.style";
 import styled from "styled-components";
+import { device } from "assets/Styles/theme";
 
 const Navi = styled(NaviSub)` 
     margin: 0;
@@ -41,6 +42,18 @@ const StyledDotLink = styled(StyledLinkSub)`
     }
 
 `
+const WrappForMobile = styled.div` 
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height:100%;
+    overflow-y: scroll;
+    align-items: center;
+
+    @media ${device.desktop}{
+        overflow: hidden;
+    }
+`
 
 const Crew = ({handleSetBackground, data}) =>{
     const navigate = useNavigate();
@@ -50,24 +63,13 @@ const Crew = ({handleSetBackground, data}) =>{
         navigate("/crew/douglas%20hurley", { replace: true })
     },[])
     return(
-        <>
+        <WrappForMobile>
            <PageTitle>
                     <H1grey>02</H1grey>
                     <H1>MEET YOUR CREW</H1>
             </PageTitle>
-            <Wrapp1>
                 <Outlet/>
-            </Wrapp1>
-            <Wrapp1>
-                <Section2>
-                    <Navi>
-                        {data.map(person =>(
-                            <StyledDotLink key={person.name} to={`/crew/${encodeURIComponent(person.name.toLowerCase())}`} > </StyledDotLink>
-                        ))}
-                    </Navi>
-                </Section2>
-            </Wrapp1>
-        </>
+        </WrappForMobile>
     )
 }
 
