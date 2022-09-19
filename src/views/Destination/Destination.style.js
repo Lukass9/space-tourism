@@ -31,11 +31,9 @@ export const WrappForMobile = styled.div`
     overflow-y: scroll;
     align-items: center;
 
-
     @media ${device.desktop}{
         overflow-y: hidden;
     }
-
 `
 export const NaviSub = styled(Navi)`
     position: static;
@@ -116,8 +114,13 @@ export const PageTitle = styled.section `
     margin: 2% 0;
     justify-content: center;
 
-    @media ${device.desktop}{
+    @media ${device.tablet}{
         justify-content: flex-start;
+        width: 90vw;
+    }
+
+    @media ${device.desktop}{
+        width: 75vw;
     }
 `
 export const Section2 = styled.section `
@@ -145,6 +148,10 @@ export const TitleBig = styled.h1 `
     font-weight: 400;
     margin: 37px 0 0 0;
     
+    @media ${device.tablet}{
+        font-size: 80px;
+    }
+    
     @media ${device.desktop}{
         font-size: 100px;
         margin: 37px 0;
@@ -153,8 +160,13 @@ export const TitleBig = styled.h1 `
 
 export const Img = styled.img `
    width: 50%;
+    @media ${device.tablet}{
+        margin: 5% 0;
+        width: 40%;
+    }
+
     @media ${device.desktop}{
-        margin-top: 5%;
+        margin: 5% 0 0 0;
         width: auto;
     }
     /* width: 47%; */
@@ -194,6 +206,13 @@ export const Description = styled.p`
     width: 327px;
     text-align: center;
 
+    @media ${device.tablet}{
+        font-size: 16px;
+        width: 573px;
+        line-height: 28px;
+        text-align: center;
+    }
+
     @media ${device.desktop}{
         font-size: 18px;
         width: 444px;
@@ -204,15 +223,22 @@ export const Description = styled.p`
 
 export const WrappDetails = styled.div ` 
     border-top: 1px solid  #383B4B;
-    margin-top: 12%;
+    margin: 12% 0;
     display: flex;
     flex-direction: column;
     width: 100%;
-    align-items: center;    
-
-    @media ${device.desktop}{
+    align-items: center;
+    
+    @media ${device.tablet}{
         flex-direction: row;
         align-items: flex-start;
+        justify-content: space-evenly;
+        width: 80%;
+        margin: 8% 0;
+    }
+
+    @media ${device.desktop}{
+        width: 100%;
     }
 `
 export const WrappDetailsInfo = styled.div` 
@@ -221,8 +247,13 @@ export const WrappDetailsInfo = styled.div`
     align-items: center;
     width: 50%;
 
+    @media ${device.tablet}{
+        width: auto;
+    }
+
     @media ${device.desktop}{
         align-items: flex-start;
+        width: 50%;
     }
 `
 

@@ -4,9 +4,11 @@ import { device } from "assets/Styles/theme";
 
 
 export const Wrapp = styled.div `
+    position: static;
     display: flex;
     width: 100%;
     justify-content: space-between;
+    /* overflow: hidden; */
     @media ${device.desktop}{
         flex-direction: row;
         align-items:center;
@@ -23,30 +25,34 @@ export const Navi = styled.ol`
     flex-direction: column;
     counter-reset: navCounter;
     text-decoration: none;
-    padding: 97px 30px;
+    padding: 97px 0px 0px 30px;
     background: rgba(255, 255, 255, 0.04);
     font-size:  ${({theme})=> theme.fontSize.navText};
     font-weight: 400;
     font-family: ${({theme})=> theme.fontFamily.barlowCondensed};
     letter-spacing: ${({theme})=> theme.letterSpacing.navText};
     margin: 0;
-    width: 66%;
+    width: 67%;
     height: 100vh;
     backdrop-filter: blur(25px);
     /* padding: 36px 0px 36px 30px; */
     transform: ${props => props.hamburger ? "translateX(0%)" : "translateX(100%)"};
     transition: transform .5s .1s ease;
 
-    @media ${device.desktop}{
+    @media ${device.tablet}{
         position: static;
-        padding: 36px 30px; 
-        margin-top: 14px;
-        margin-bottom: 14px;
+        padding: 36px 0px; 
         flex-direction: row;
         backdrop-filter: blur(25px);
         height: auto;
         width: 58%;
         transform: translateX(0%);
+    }
+
+    @media ${device.desktop}{
+        padding: 36px 30px; 
+        margin-top: 14px;
+        margin-bottom: 14px;
 
         &::before{
             content:' ';
@@ -92,11 +98,17 @@ export const StyledLink = styled(NavLink).attrs({ activeClassName })`
         }
     }
 
-    @media ${device.desktop}{
+    @media ${device.tablet}{
         line-height: 17px;
         position: relative;
-        margin-top: auto;
+        font-size: 14px;
+        /* margin-top: auto; */
         margin-left: 7%;
+        margin-top: 0px;
+
+        &::before{
+        content: none;
+        }
 
         &:first-child{
             margin-left: 7vw;
@@ -128,6 +140,17 @@ export const StyledLink = styled(NavLink).attrs({ activeClassName })`
                     opacity: 1;
                 }
             }
+    }
+
+    @media ${device.desktop}{
+        margin-top: auto;
+        font-size: 16px;
+
+        
+
+        &::before{
+            content: "0" counter(navCounter) " ";
+        }
     }
 `
 

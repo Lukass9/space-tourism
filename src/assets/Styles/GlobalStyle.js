@@ -9,7 +9,7 @@ html {
   }
 
   *, *::after, *::before {
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
   
 body {
@@ -18,6 +18,5 @@ body {
     font-weight: 400;
     margin: 0;
     padding: 0;
-    overflow: hidden;
   }
 `;

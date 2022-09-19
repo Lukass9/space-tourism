@@ -14,15 +14,14 @@ const Nav = () =>{
 
     return(
         <Wrapp>
-            {window.matchMedia('(max-width: 1439px)').matches ? 
+            {window.matchMedia('(max-width: 767px)').matches ? 
                 <Menu hamburger={hamburger} handleActiveMenu={handleActiveMenu} /> : 
                 null}
             <Logo src={logo}/>
-            {/* <button onClick={()=> alert("o chuj chodzi?")}>Kurwa</button> */}
             <Navi hamburger={hamburger}>
                 <StyledLink to="/">HOME</StyledLink>
                 <StyledLink to="/destination">DESTINATION</StyledLink>
-                <StyledLink to="/crew">CREW</StyledLink>
+                <StyledLink to="crew">CREW</StyledLink>
                 <StyledLink to="/technology">TECHNOLOGY</StyledLink>
             </Navi>
         </Wrapp>

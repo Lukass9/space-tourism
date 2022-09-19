@@ -19,19 +19,26 @@ import MarkPic from 'assets/crew/image-mark-shuttleworth.png'
 import VictorPic from 'assets/crew/image-victor-glover.png'
 import AnoushehPic from 'assets/crew/image-anousheh-ansari.png'
 import Technology from './Technology/Technology';
-import LunchPic from "assets/technology/image-launch-vehicle-portrait.jpg"
-import SpaceRaportPic from "assets/technology/image-spaceport-portrait.jpg"
-import LandscapePic from "assets/technology/image-space-capsule-portrait.jpg"
+import LunchPicPortein from "assets/technology/image-launch-vehicle-portrait.jpg"
+import SpaceRaportPicPortein from "assets/technology/image-spaceport-portrait.jpg"
+import SpaceportPicPortein from "assets/technology/image-space-capsule-portrait.jpg"
+import LunchPicLandscape from "assets/technology/image-launch-vehicle-landscape.jpg"
+import SpaceRaportPicLandscape from "assets/technology/image-spaceport-landscape.jpg"
+import SpaceportPicLandscape from "assets/technology/image-space-capsule-landscape.jpg"
 import { Vechicle } from './Technology/Vechicle';
 
 const App = () => {
   const planets = [MoonPic,MarsPic,EuropaPic,TitanPic]
   const persons = [DouglasPic, MarkPic, VictorPic, AnoushehPic]
-  const vechicle =[LunchPic, SpaceRaportPic, LandscapePic]
+  let vechicle;
+  const vechicle_landspace =[LunchPicLandscape, SpaceRaportPicLandscape, SpaceportPicLandscape]
+  const vechicle_portrait = [LunchPicPortein, SpaceRaportPicPortein, SpaceportPicPortein]
   const [background, setBackground] = useState('')
   const handleSetBackground = (bck) =>{
       setBackground(bck)
   }
+
+  vechicle = window.matchMedia('(min-width: 1440px)').matches ? vechicle_portrait : vechicle_landspace
 
   return (
     <BrowserRouter>
@@ -50,9 +57,9 @@ const App = () => {
                 <Route key={crew.name} path={encodeURIComponent(crew.name)} element={<Persons person={persons[i]} data={crew} crewName={data.crew}/>} />
               ))}
             </Route>
-            <Route path={"/technology"} element={<Technology handleSetBackground={handleSetBackground} data={data.technology}/>}>
+            <Route path={"/technology"} element={<Technology handleSetBackground={handleSetBackground} />}>
               {data.technology.map((technology, i) => (
-                <Route key={technology.name} path={encodeURIComponent(technology.name)} element={<Vechicle vechicle={vechicle[i]} data={technology}/>} />
+                <Route key={technology.name} path={encodeURIComponent(technology.name)} element={<Vechicle vechicle={vechicle[i]} data={technology} technologyName={data.technology}/>} />
               ))}
             </Route>
           </Routes>
