@@ -8,7 +8,7 @@ export const Vechicle = ({data, vechicle, technologyName}) =>{
                 <NaviWrapp_v2>
                     <Navi_v2>
                         {technologyName.map((technology, i)=>(
-                            <StyledDotLink key={technology.name} to={`/technology/${encodeURIComponent(technology.name.toLowerCase())}`} > {i+1} </StyledDotLink>
+                            <StyledDotLink key={technology.name} to={`/space-tourism/technology/${encodeURIComponent(technology.name.toLowerCase())}`} > {i+1} </StyledDotLink>
                         ))}
                     </Navi_v2>
                 </NaviWrapp_v2>

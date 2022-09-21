@@ -14,7 +14,7 @@ const Crew = ({handleSetBackground}) =>{
     useEffect(()=>{
         let background = setBackground(desktop, tablet, mobile)
         handleSetBackground(background)
-        navigate("/crew/douglas%20hurley", { replace: true })
+        navigate("/space-tourism/crew/douglas%20hurley", { replace: true })
     },[])
     return(
         <WrappForMobile>

@@ -10,7 +10,7 @@ export const Persons = ({crewName, data, person}) =>{
                 <Description>{data.bio}</Description>
                 <Navi>
                     {crewName.map(crew =>(
-                        <StyledDotLink key={crew.name} to={`/crew/${encodeURIComponent(crew.name.toLowerCase())}`} > </StyledDotLink>
+                        <StyledDotLink key={crew.name} to={`/space-tourism/crew/${encodeURIComponent(crew.name.toLowerCase())}`} > </StyledDotLink>
                     ))}
                 </Navi>
             </Section1>

@@ -46,18 +46,18 @@ const App = () => {
       <GlobalStyle/>
         <MainTemplate background={background}>
           <Routes>
-            <Route exact path={"/"}  element={<Home handleSetBackground={handleSetBackground}/>}/>
-            <Route path={"/destination"} element={<Destination handleSetBackground={handleSetBackground}/>}>
+            <Route exact path={"/space-tourism"}  element={<Home handleSetBackground={handleSetBackground}/>}/>
+            <Route exact path={"/space-tourism/destination"} element={<Destination handleSetBackground={handleSetBackground}/>}>
               {data.destinations.map((destination, i) => (
                 <Route key={destination.name} path={destination.name.toLowerCase()} element={<Planets planet={planets[i]} data={destination}/>} />
               ))}
             </Route>
-            <Route path={"/crew"} element={<Crew handleSetBackground={handleSetBackground} />}>
+            <Route exact path={"/space-tourism/crew"} element={<Crew handleSetBackground={handleSetBackground} />}>
               {data.crew.map((crew, i) => (
                 <Route key={crew.name} path={encodeURIComponent(crew.name)} element={<Persons person={persons[i]} data={crew} crewName={data.crew}/>} />
               ))}
             </Route>
-            <Route path={"/technology"} element={<Technology handleSetBackground={handleSetBackground} />}>
+            <Route exact path={"/space-tourism/technology"} element={<Technology handleSetBackground={handleSetBackground} />}>
               {data.technology.map((technology, i) => (
                 <Route key={technology.name} path={encodeURIComponent(technology.name)} element={<Vechicle vechicle={vechicle[i]} data={technology} technologyName={data.technology}/>} />
               ))}

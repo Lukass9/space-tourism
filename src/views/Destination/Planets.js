@@ -6,10 +6,10 @@ export const Planets = ({data, planet}) =>{
         <WrappContent>
               <NaviWrapp>
                 <NaviSub>
-                        <StyledLinkSub to="/destination/moon">MOON</StyledLinkSub>
-                        <StyledLinkSub to="/destination/mars">MARS</StyledLinkSub>
-                        <StyledLinkSub to="/destination/europa">EUROPA</StyledLinkSub>
-                        <StyledLinkSub to="/destination/titan">TITAN</StyledLinkSub>
+                        <StyledLinkSub to="/space-tourism/destination/moon">MOON</StyledLinkSub>
+                        <StyledLinkSub to="/space-tourism/destination/mars">MARS</StyledLinkSub>
+                        <StyledLinkSub to="/space-tourism/destination/europa">EUROPA</StyledLinkSub>
+                        <StyledLinkSub to="/space-tourism/destination/titan">TITAN</StyledLinkSub>
                 </NaviSub>
             </NaviWrapp>
             <Section1>

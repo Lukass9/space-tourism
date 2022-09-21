@@ -10,7 +10,7 @@ const Technology = ({handleSetBackground}) =>{
 
     useEffect(()=>{
         handleSetBackground(TechnologyBg)
-        navigate("/technology/launch%20vehicle", { replace: true })
+        navigate("/space-tourism/technology/launch%20vehicle", { replace: true })
     },[])
     return(
         <WrappForMobile>
