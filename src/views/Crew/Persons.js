@@ -15,7 +15,7 @@ export const Persons = ({crewName, data, person}) =>{
                 </Navi>
             </Section1>
             <Section2>
-                <Img src={person}/>
+                <Img src={person} alt={data.name}/>
             </Section2>
         </WrappContent>
     )

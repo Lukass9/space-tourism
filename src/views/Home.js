@@ -4,6 +4,7 @@ import HomeBgTablet from 'assets/home/background-home-tablet.jpg'
 import HomeBgSmartphone from 'assets/home/background-home-mobile.jpg'
 import { setBackground } from "helpers/hooks/setBackground";
 import { H1, H2, P, Wrapp, WrappArticle, WrappText, WrappButton, ButtonExplore } from "./Home.style";
+import { NavLink } from "react-router-dom";
 
 const Home = ({handleSetBackground}) =>{
     
@@ -20,8 +21,8 @@ const Home = ({handleSetBackground}) =>{
                     <P>Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</P>
                 </WrappText>
             </WrappArticle>
-            <WrappButton to="/space-tourism/destination">
-                <ButtonExplore >EXPLORE</ButtonExplore>
+            <WrappButton>
+                <ButtonExplore as={NavLink} to="/space-tourism/destination" >EXPLORE</ButtonExplore>
             </WrappButton>
         </Wrapp>
     )

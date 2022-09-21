@@ -13,7 +13,7 @@ export const Planets = ({data, planet}) =>{
                 </NaviSub>
             </NaviWrapp>
             <Section1>
-                <Img src={planet}/>
+                <Img src={planet} alt={data.name}/>
             </Section1>
             <Section2>
                 <WrappText>

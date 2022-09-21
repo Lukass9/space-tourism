@@ -15,7 +15,7 @@ export const Wrapp = styled.div `
         margin-top: 1.5vw;
     }
 `
-export const Navi = styled.ol`
+export const Navi = styled.nav`
     position: absolute;
     top: 0px;
     right: 0px;

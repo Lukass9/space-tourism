@@ -31,7 +31,7 @@ export const Section2 = styled.section `
         order: 1;
     }
 `
-export const WrappContent = styled.div`
+export const WrappContent = styled.section`
     display: flex;
     align-items: center;
     justify-content: space-between ;
@@ -157,7 +157,7 @@ export const StyledDotLink = styled(NavLink).attrs({ activeClassName })`
 //     align-items: center ;
 //     justify-content: center;
 // `
-export const Navi_v2 = styled.ol`
+export const Navi_v2 = styled.nav`
     display: flex;
     padding: 0;
     flex-direction: row;
@@ -172,7 +172,7 @@ export const NaviWrapp_v2 = styled.section`
     padding-right: 3vw;
 `
 
-export const WrappText = styled.div` 
+export const WrappText = styled.article` 
     display: flex; 
     flex-direction: column;
     align-items: center;

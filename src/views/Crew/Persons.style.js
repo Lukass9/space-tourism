@@ -10,7 +10,7 @@ export const Img = styled.img`
         max-height: 120%;
     }
 `
-export const Section1 = styled.section`
+export const Section1 = styled.article`
     /* position: relative;
     top: 15%; */
     display: flex; 
@@ -56,7 +56,7 @@ export const Section2 = styled.section `
         margin-bottom: auto;
     }
 `
-export const WrappContent = styled.div`
+export const WrappContent = styled.section`
     display: flex;
     justify-content: center;
     align-items: center ;

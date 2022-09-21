@@ -19,7 +19,7 @@ export const Vechicle = ({data, vechicle, technologyName}) =>{
                 </WrappText>
             </Section1>
             <Section2>
-                <Img src={vechicle}/>
+                <Img src={vechicle} alt={data.name}/>
             </Section2>
         </WrappContent>
     )

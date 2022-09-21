@@ -17,7 +17,7 @@ const Nav = () =>{
             {window.matchMedia('(max-width: 767px)').matches ? 
                 <Menu hamburger={hamburger} handleActiveMenu={handleActiveMenu} /> : 
                 null}
-            <Logo src={logo}/>
+            <Logo src={logo} alt="Logo"/>
             <Navi hamburger={hamburger}>
                 <StyledLink to="space-tourism/">HOME</StyledLink>
                 <StyledLink to="space-tourism/destination">DESTINATION</StyledLink>

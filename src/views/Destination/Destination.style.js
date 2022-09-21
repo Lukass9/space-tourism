@@ -24,7 +24,7 @@ export const Wrapp = styled.div `
     display: flex; 
     margin: 50px 170px 0 170px;
 `
-export const WrappForMobile = styled.div` 
+export const WrappForMobile = styled.main` 
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -108,7 +108,7 @@ export const Section1 = styled.section `
         order: 0;
     }
 `
-export const PageTitle = styled.section `
+export const PageTitle = styled.header`
     display: flex;
     width: 75vw;
     margin: 2% 0;
@@ -171,7 +171,7 @@ export const Img = styled.img `
     }
     /* width: 47%; */
 `
-export const WrappContent = styled.div ` 
+export const WrappContent = styled.section` 
     display: flex;
     flex-direction: column;
 
@@ -181,7 +181,7 @@ export const WrappContent = styled.div `
     }
     /* padding: 2% 17%; */
 `
-export const WrappText = styled.div ` 
+export const WrappText = styled.article` 
     display: flex;
     flex-direction: column;
     margin-left: 0;

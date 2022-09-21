@@ -3,7 +3,7 @@ import { device } from "assets/Styles/theme";
 import { NavLink } from 'react-router-dom';
 
 
-export const Wrapp = styled.div `
+export const Wrapp = styled.main `
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -20,7 +20,7 @@ export const Wrapp = styled.div `
     }
 `
 
-export const WrappArticle = styled.div ` 
+export const WrappArticle = styled.section ` 
     display: flex;
     flex-direction: row;
     @media ${device.desktop}{
@@ -29,7 +29,7 @@ export const WrappArticle = styled.div `
         justify-content: center;
     }
 `
-export const WrappText = styled.div ` 
+export const WrappText = styled.article ` 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,11 +42,10 @@ export const WrappText = styled.div `
         align-items: stretch;
     }
 `
-export const WrappButton = styled(NavLink)` 
+export const WrappButton = styled.div` 
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
     
     @media ${device.desktop}{
         width: 460px;
@@ -55,6 +54,9 @@ export const WrappButton = styled(NavLink)`
 `
 export const ButtonExplore = styled.button` 
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 150px;
     height: 150px;
     background-color: ${({theme})=>theme.colors.white};
@@ -63,6 +65,8 @@ export const ButtonExplore = styled.button`
     font-family: 'Bellefair';
     font-size: 20px;
     cursor: pointer;
+    text-decoration: none;
+    color: #000;
     
     &::before{
         position: absolute;
