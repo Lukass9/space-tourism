@@ -46,7 +46,7 @@ const App = () => {
       <GlobalStyle/>
         <MainTemplate background={background}>
           <Routes>
-            <Route exact path={"/space-tourism"}  element={<Home handleSetBackground={handleSetBackground}/>}/>
+            <Route exact path={"/space-tourism/"}  element={<Home handleSetBackground={handleSetBackground}/>}/>
             <Route exact path={"/space-tourism/destination"} element={<Destination handleSetBackground={handleSetBackground}/>}>
               {data.destinations.map((destination, i) => (
                 <Route key={destination.name} path={destination.name.toLowerCase()} element={<Planets planet={planets[i]} data={destination}/>} />

@@ -32,12 +32,12 @@ const HamburgerMenu = styled.div`
     }
 `
 
-const Menu = ({handleActiveMenu, hamburger}) =>{
+const Menu =({handleActiveMenu, hamburger}) =>{
+
     return(
-        <WrappLikeButton onClick={handleActiveMenu}>
+        <WrappLikeButton  onClick={handleActiveMenu}>
             <HamburgerMenu hamburger={hamburger}/>
         </WrappLikeButton>
     )
 }
-
 export default Menu
