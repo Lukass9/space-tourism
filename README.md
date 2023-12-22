@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Space Tourism Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> A multi-page website designed to showcase space tourism opportunities, built as a Frontend Mentor challenge.
+> Live demo [_here_](https://lukass9.github.io/space-tourism/).
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [General Info](#general-information)
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Setup](#setup)
+- [Usage](#usage)
+- [Project Status](#project-status)
+- [Room for Improvement](#room-for-improvement)
+- [Acknowledgements](#acknowledgements)
+- [Contact](#contact)
+<!-- * [License](#license) -->
 
-### `npm start`
+## General Information
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The Space Tourism Website project aims to provide an immersive experience into space tourism, catering to enthusiasts interested in future recreational space travel.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Purpose
 
-### `npm test`
+Addressing the curiosity surrounding space tourism, the project offers comprehensive insights into potential travel opportunities, aiming to bridge the gap in accessible information and highlight feasibility.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Objectives
 
-### `npm run build`
+Replicating a realistic space tourism website design from Frontend Mentor, the project enhances coding skills in HTML, CSS, and JavaScript. It serves as a portfolio piece showcasing frontend development expertise, including the utilization and mastery of React Router for seamless page navigation.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React - v18.2.0
+- React Router DOM - v6.3.0
+- Styled-components - v5.3.5
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Features
 
-### `npm run eject`
+- Responsive design for optimal viewing on various devices
+- Hover states for interactive elements
+- Page toggling functionality between tabs for new information
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Screenshots
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![desktop](desktop.png)
+![mobile](mobile.png)
+![mobile_menu](mobile1.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Setup and Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Clone the repository
+- Install dependencies with `npm install` or `yarn install`
+- Run the application locally with `npm start start` or `yarn start start`
+- Visit [localhost](http://localhost:3000) in your browser to view the application
 
-## Learn More
+## Contact
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Created by [@Lukass9](https://github.com/Lukass9) - feel free to contact me!
