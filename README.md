@@ -9,7 +9,7 @@
 - [Technologies Used](#technologies-used)
 - [Features](#features)
 - [Screenshots](#screenshots)
-- [Setup and Usage](#setup)
+- [Setup and Usage](#setup-and-usage)
 - [Contact](#contact)
 
 ## General Information
