@@ -40,7 +40,7 @@ Replicating a realistic space tourism website design from Frontend Mentor, the p
 
 ![desktop](desktop.png)
 ![mobile](mobile.png)
-![mobile_menu](mobile1.png)
+![mobile_menu](mobile_menu.png)
 
 ## Setup and Usage
 
